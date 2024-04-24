@@ -1,0 +1,20 @@
+<div *ngIf="messageService.messages.length" class="offset-md-1">
+
+    <!-- <h2>Messages</h2>
+    <button type="button" class="clear"
+            (click)="messageService.clear()">Clear messages</button>
+    <div *ngFor='let message of messageService.messages'> {{message}} </div> -->
+    <p class="d-inline-flex gap-1">
+        <a class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Message Log
+        </a>
+       
+      </p>
+      <div class="collapse col-md-5 " id="collapseExample">
+        <button type="button" class="btn btn-danger btn-sm"  (click)="messageService.clear()">Clear messages</button>
+        <div class="card card-body">
+          <p  *ngFor='let message of messageService.messages'> <em>{{message}}</em></p>
+        </div>
+     </div>
+  </div>
+

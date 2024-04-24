@@ -1,0 +1,35 @@
+<!-- <div *ngIf="hero">
+
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+    </div>
+  
+  </div>
+  <button type="button" (click)="save()">save</button>
+  <button type="button" (click)="goBack()">go back</button> -->
+
+
+  <figure class="text-center col-md-5" *ngIf="hero">
+    <blockquote class="blockquote">
+      <h2>{{hero.name | uppercase}} Details</h2>
+    </blockquote>
+    <dl class="row">
+      <dt class="col-sm-3">Image</dt>
+      <dd class="col-sm-9"> <img src="https://picsum.photos/200"></dd>
+
+      <dt class="col-sm-3" for="hero-name">Hero Name:</dt>
+      <dd class="col-sm-9">  <input type="text" class="form-control" id="hero-name" placeholder="name" [(ngModel)]="hero.name"></dd>
+    
+      <dt class="col-sm-3">Id:</dt>
+      <dd class="col-sm-9"><p>{{hero.id}}</p></dd>
+    </dl>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button class="btn btn-success" type="button" (click)="save()">Save</button>
+      <button class="btn btn-primary" type="button" (click)="goBack()">Go back</button>
+    </div>
+  </figure>
+
+  

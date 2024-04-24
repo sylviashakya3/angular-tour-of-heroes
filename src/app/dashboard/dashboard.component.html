@@ -1,0 +1,19 @@
+
+
+<h2 class="offset-md-5 col-md-6">Top Heroes</h2>
+<div class="heroes-menu">
+    <!-- <a *ngFor="let hero of heroes"
+    routerLink="/detail/{{hero.id}}">
+    {{hero.name}}
+  </a> -->
+  <div class="card-group">
+    <div class="card" *ngFor="let hero of heroes">
+      <img src="https://picsum.photos/400" class="card-img-top">
+      <div class="card-body">
+        <a class="card-title" routerLink="/detail/{{hero.id}}"><h5>{{hero.name}}</h5></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-hero-search></app-hero-search>

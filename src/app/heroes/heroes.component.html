@@ -1,0 +1,32 @@
+<div class="offset-md-1">
+<h2 >My Heroes</h2>
+
+    <!-- <label for="new-hero">Hero name: </label>
+    <input id="new-hero" #heroName />
+     
+    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+      Add hero
+    </button> -->
+    <form class="row g-3">
+        <div class="col-auto">
+          <label for="new-hero" class="visually-hidden">Hero Name</label>
+          <input type="text" class="form-control" id="new-hero" #heroName/>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-primary mb-3" (click)="add(heroName.value); heroName.value=''">Add hero</button>
+        </div>
+      </form>
+
+<ul class="list-group col-md-2" >
+    <li *ngFor="let hero of heroes" class="list-group-item list-group-item-action">
+        <a routerLink="/detail/{{hero.id}}">
+          {{hero.name}}
+        </a>
+        <button type="button" class="btn-close" style="float:right" title="delete hero" aria-label="Close"
+  (click)="delete(hero)"></button>
+ 
+    </li>
+  </ul>
+</div>
+
+  
